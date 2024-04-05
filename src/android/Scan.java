@@ -28,7 +28,7 @@ public class Scan extends CordovaPlugin {
     private static final int REQUEST_CODE = 99;
     private static final int PHOTOLIBRARY = 0; // Choose image from picture library (same as SAVEDPHOTOALBUM for Android)
     private static final int CAMERA = 1; // Take picture from camera
-    private static final int BASE64 = 2; // picture from base64
+    private static final int AUTO_FILEPATH = 2; // Use filepath provided 
 
     private int srcType;
     private int quality;
@@ -67,8 +67,8 @@ public class Scan extends CordovaPlugin {
                     preference = ScanConstants.OPEN_CAMERA;
                 } else if (this.srcType == PHOTOLIBRARY) {
                     preference = ScanConstants.OPEN_MEDIA;
-                } else if (this.srcType == BASE64) {
-                    preference = ScanConstants.DECODE_BASE64;
+                } else if (this.srcType == AUTO_FILEPATH) {
+                    preference = ScanConstants.LOAD_FROM_URL;
                 }
                 Intent intent = new Intent(cordova.getActivity().getApplicationContext(), ScanActivity.class);
                 intent.putExtra(ScanConstants.OPEN_INTENT_PREFERENCE, preference);
