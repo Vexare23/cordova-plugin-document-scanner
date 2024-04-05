@@ -55,8 +55,8 @@ public class Scan extends CordovaPlugin {
             //[sourceType, fileName, quality, returnBase64]
             this.srcType = args.getInt(0); 
             this.quality = args.getInt(2);
-            this.filePath = args.getString(4);
             this.returnBase64 = args.getBoolean(3);
+            this.filePath = args.getString(4);
             this.callbackContext = callbackContext;
 
             cordova.setActivityResultCallback(this);
