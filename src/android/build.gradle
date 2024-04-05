@@ -7,5 +7,5 @@ allprojects {
 }
 
 dependencies {
-	implementation 'com.github.LekyDev:scanlibrary:f63d58222f'
+	implementation 'com.github.LekyDev:scanlibrary:8db2318516'
 }
