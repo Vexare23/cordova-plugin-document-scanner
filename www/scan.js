@@ -10,7 +10,7 @@ module.exports = {
 		if ((options.sourceType === 1 || options.sourceType === 0 || options.sourceType === 2) && typeof options.fileName === "string") {
 			var sourceType = options.sourceType;	// 0 Gallery, 1 Camera
 			var fileName = options.fileName;	// "image" if not specified
-			var filePath = options.filePath; // base 64 image
+			var filePath = options.filePath; // filepath to image
 			var quality = options.quality;	// Quality defaults to 1 (highest). If value > 1, a smaller image is returned to save memory. https://developer.android.com/reference/android/graphics/BitmapFactory.Options.html#inSampleSize
 			var returnBase64 = options.returnBase64;	// return base64 output if set to true. Defaults to false.
 			var args = [sourceType, fileName, quality, returnBase64, filePath];
