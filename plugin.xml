@@ -22,9 +22,10 @@
     <source-file src="src/android/FileHelper.java" target-dir="src/com/neutrinos/plugin/" />
     <framework src="src/android/build.gradle" custom="true" type="gradleReference"/>
 
-    <!-- Hook to update the manifest file -->
-    <hook type="before_build" src="src/android/manifest-hook.js"/>
-    <hook type="before_build" src="src/android/modifyAndroidManifest.js"/>
+    <!-- Hook to update the manifest file before build -->
+    <hook type="before_build" src="src/android/manifest-hook-before-build.js"/>
+    <!-- Hook to update the manifest file after build -->
+    <hook type="after_build" src="src/android/manifest-hook-after-build.js"/>
   </platform>
 
 
